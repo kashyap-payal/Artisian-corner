@@ -8,11 +8,13 @@ const authRoutes = require("./routes/authRoutes");
 const userRoutes = require("./routes/userRoutes");
 const productRoutes = require("./routes/productRoutes");
 const testUpload = require("./routes/testupload");
+const orderRoutes = require("./routes/orderRoutes");
+const adminRoutes = require("./routes/adminRoutes");
 const app = express();
 app.use(morgan("dev"));
 app.use(cors());
 app.use(express.json());
-
+app.use("/api/admin", adminRoutes);
 // Test route
 app.get("/", (req, res) => {
   res.send("API Running");
@@ -22,6 +24,7 @@ app.get("/", (req, res) => {
 app.use("/api/auth", authRoutes);
 app.use("/api/users", userRoutes);
 app.use("/api/test-upload", testUpload);
+app.use("/api/orders", orderRoutes);
 app.use((req, res, next) => {
   console.log("Content-Type:", req.headers["content-type"]);
   next();

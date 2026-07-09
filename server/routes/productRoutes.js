@@ -1,7 +1,14 @@
 const express = require("express");
 const router = express.Router();
 
-const { addProduct,getProducts,getProductById,updateProduct,deleteProduct } = require("../controllers/productController");
+const {
+  addProduct,
+  getProducts,
+  getProductById,
+  updateProduct,
+  deleteProduct,
+  addReview,
+} = require("../controllers/productController");
 const protect = require("../middleware/authMiddleware");
 const authorize = require("../middleware/roleMiddleware");
 const upload = require("../middleware/uploadMiddleware");
@@ -27,6 +34,11 @@ router.delete(
   authorize("seller", "admin"),
   deleteProduct
 );
+router.post(
+  "/:id/review",
+  protect,
+  addReview
+);
 // Add Product (Only Seller)
 router.post(
   "/add",
@@ -35,13 +47,6 @@ router.post(
   upload.single("image"),
   addProduct
 );
-  upload.single("image"),
-  (req, res, next) => {
-    console.log("After upload");
-    next();
-  },
-  protect,
-  authorize("seller", "admin"),
-  addProduct
+ 
 
 module.exports = router;
