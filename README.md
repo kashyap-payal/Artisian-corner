@@ -46,13 +46,13 @@ Artisans Corner is a full-stack MERN marketplace application where sellers can a
 
 ### Demo Buyer
 
-* Email: kashyappayal654@gmail.com
-* Password: 56778
+* Email: buyer.demo@example.com
+* Password: BuyerDemo123
 
 ### Demo Vendor / Seller
 
-* Email: abc@gmail.com
-* Password:678990
+* Email: seller.demo@example.com
+* Password:SellerDemo123
 
 ## Installation
 
