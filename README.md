@@ -2,6 +2,12 @@
 
 Artisans Corner is a full-stack MERN marketplace application where sellers can add and manage products, while buyers can browse products, add items to their cart, place orders, and submit reviews.
 
+Live Application
+
+Frontend: https://artisian-corner-orpin.vercel.app/
+
+Backend API: https://artisian-corner-production.up.railway.app/
+
 ## Features
 
 * User Registration and Login
