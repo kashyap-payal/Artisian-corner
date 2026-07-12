@@ -18,7 +18,7 @@ const { addToWishlist } = useContext(WishlistContext);
   const fetchProducts = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:5000/api/products"
+        "https://artisian-corner-production.up.railway.app/api/products"
       );
 
      console.log("Products:", response.data);
@@ -33,7 +33,7 @@ const deleteProduct = async (id) => {
     const token = localStorage.getItem("token");
 
     await axios.delete(
-      `http://localhost:5000/api/products/${id}`,
+      `https://artisian-corner-production.up.railway.app/api/products/${id}`,
       {
         headers: {
           Authorization: `Bearer ${token}`,

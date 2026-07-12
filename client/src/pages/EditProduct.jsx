@@ -20,7 +20,7 @@ function EditProduct() {
   const fetchProduct = async () => {
     try {
       const res = await axios.get(
-        `http://localhost:5000/api/products/${id}`
+        `https://artisian-corner-production.up.railway.app/api/products/${id}`
       );
 
       setName(res.data.name);
@@ -37,7 +37,7 @@ function EditProduct() {
 
     try {
       await axios.put(
-        `http://localhost:5000/api/products/${id}`,
+        `https://artisian-corner-production.up.railway.app/api/products/${id}`,
         {
           name,
           description,

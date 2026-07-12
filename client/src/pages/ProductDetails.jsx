@@ -19,7 +19,7 @@ function ProductDetails() {
   const fetchProduct = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:5000/api/products/${id}`
+        `https://artisian-corner-production.up.railway.app/api/products/${id}`
       );
 
       setProduct(response.data);
@@ -33,7 +33,7 @@ function ProductDetails() {
 
     try {
       await axios.post(
-        `http://localhost:5000/api/products/${id}/review`,
+        `https://artisian-corner-production.up.railway.app/api/products/${id}/review`,
         {
           rating,
           comment,

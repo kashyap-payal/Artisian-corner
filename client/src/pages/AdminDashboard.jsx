@@ -18,7 +18,7 @@ function AdminDashboard() {
       const token = localStorage.getItem("token");
 
       const res = await axios.get(
-        "http://localhost:5000/api/admin/dashboard",
+        "https://artisian-corner-production.up.railway.app",
         {
           headers: {
             Authorization: `Bearer ${token}`,

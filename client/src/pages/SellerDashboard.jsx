@@ -15,7 +15,7 @@ function SellerDashboard() {
   const fetchProducts = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:5000/api/products"
+        "https://artisian-corner-production.up.railway.app/api/products"
       );
 
       const myProducts = res.data.filter(
@@ -30,7 +30,7 @@ function SellerDashboard() {
 const deleteProduct = async (id) => {
   try {
     await axios.delete(
-      `http://localhost:5000/api/products/${id}`,
+      `https://artisian-corner-production.up.railway.app/api/products/${id}`,
       {
         headers: {
           Authorization: `Bearer ${token}`,

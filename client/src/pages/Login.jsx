@@ -10,7 +10,7 @@ function Login() {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/auth/login",
+        "https://artisian-corner-production.up.railway.app/api/auth/login",
         {
           email,
           password,

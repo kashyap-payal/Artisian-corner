@@ -13,7 +13,7 @@ function MyOrders() {
       const token = localStorage.getItem("token");
 
       const response = await axios.get(
-        "http://localhost:5000/api/orders/my-orders",
+        "https://artisian-corner-production.up.railway.app/api/orders/my-orders",
         {
           headers: {
             Authorization: `Bearer ${token}`,

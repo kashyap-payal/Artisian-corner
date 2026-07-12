@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:5000/api/products";
+const API_URL = "https://artisian-corner-production.up.railway.app/api/products";
 
 export const getProducts = async () => {
   const response = await axios.get(API_URL);
