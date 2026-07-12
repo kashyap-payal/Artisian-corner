@@ -21,16 +21,16 @@ const handleSubmit = async (e) => {
   try {
     const token = localStorage.getItem("token");
 
-    const response = await axios.post(
-      "https://artisian-corner-production.up.railway.app",
-      formData,
-      {
-        headers: {
-          Authorization: `Bearer ${token}`,
-          "Content-Type": "multipart/form-data",
-        },
-      }
-    );
+   const response = await axios.post(
+  "https://artisian-corner-production.up.railway.app/api/products/add",
+  formData,
+  {
+    headers: {
+      Authorization: `Bearer ${token}`,
+      "Content-Type": "multipart/form-data",
+    },
+  }
+);
 
     toast.success(response.data.message);
     console.log(response.data);
